@@ -1,0 +1,10 @@
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\bin\Debug\DANGNHAP.exe.config
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\bin\Debug\DANGNHAP.exe
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\bin\Debug\DANGNHAP.pdb
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\obj\Debug\DANGNHAP.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\obj\Debug\DANGNHAP.Form1.resources
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\obj\Debug\DANGNHAP.Properties.Resources.resources
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\obj\Debug\DANGNHAP.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\obj\Debug\DANGNHAP.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\obj\Debug\DANGNHAP.exe
+C:\Users\DELL\source\repos\DANGNHAP\DANGNHAP\obj\Debug\DANGNHAP.pdb
