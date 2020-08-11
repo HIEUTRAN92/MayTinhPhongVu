@@ -9,3 +9,8 @@ C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csproj.Co
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.exe
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.pdb
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.QLSanPham.resources
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csproj.CopyComplete
