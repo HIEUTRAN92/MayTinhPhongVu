@@ -26,7 +26,7 @@ namespace DANGNHAP
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8V2J7I1;Initial Catalog=DangNhap;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8V2J7I1;Initial Catalog=QLBH;Integrated Security=True");
             try
             {
                 con.Open();
@@ -54,6 +54,11 @@ namespace DANGNHAP
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

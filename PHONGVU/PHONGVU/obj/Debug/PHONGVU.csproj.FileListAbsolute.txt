@@ -1,0 +1,11 @@
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DANGNHAP.exe.config
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DANGNHAP.exe
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DANGNHAP.pdb
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.Form1.resources
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.Properties.Resources.resources
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.exe
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.pdb
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.QLSanPham.resources
