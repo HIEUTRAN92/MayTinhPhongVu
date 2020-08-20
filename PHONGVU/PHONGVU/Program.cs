@@ -16,7 +16,7 @@ namespace DANGNHAP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLSanPham());
+            Application.Run(new frmQLSP());
         }
     }
 }
