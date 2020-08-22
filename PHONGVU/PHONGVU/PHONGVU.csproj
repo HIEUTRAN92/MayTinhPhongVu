@@ -113,6 +113,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHD.resx">
+      <DependentUpon>frmQLHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRepost.resx">
       <DependentUpon>frmRepost.cs</DependentUpon>
     </EmbeddedResource>
