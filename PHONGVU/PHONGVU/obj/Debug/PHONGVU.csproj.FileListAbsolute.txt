@@ -62,3 +62,13 @@ C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\de\DevExpress.Xtr
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\es\DevExpress.XtraBars.v20.1.resources.dll
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\ja\DevExpress.XtraBars.v20.1.resources.dll
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\ru\DevExpress.XtraBars.v20.1.resources.dll
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csprojAssemblyReference.cache
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmLogin.resources
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmRepost.resources
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmTrangChu.resources
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.Properties.Resources.resources
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmQLSP.resources
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csproj.GenerateResource.cache
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.exe.licenses
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.exe
+E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.pdb
