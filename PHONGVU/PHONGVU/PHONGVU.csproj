@@ -78,6 +78,12 @@
     <Compile Include="frmRepost.Designer.cs">
       <DependentUpon>frmRepost.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRepostHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepostHD.Designer.cs">
+      <DependentUpon>frmRepostHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRepost.resx">
       <DependentUpon>frmRepost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepostHD.resx">
+      <DependentUpon>frmRepostHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
