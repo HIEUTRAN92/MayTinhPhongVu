@@ -72,6 +72,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmkhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmkhachhang.Designer.cs">
+      <DependentUpon>frmkhachhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRepost.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmkhachhang.resx">
+      <DependentUpon>frmkhachhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRepost.resx">
       <DependentUpon>frmRepost.cs</DependentUpon>
