@@ -32,6 +32,11 @@ namespace DANGNHAP.Modelss
         [Column(TypeName = "text")]
         public string img { get; set; }
 
+        public int? SoLuong { get; set; }
+
+        [StringLength(20)]
+        public string HangSX { get; set; }
+
         public int MaLoaiSP { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -28,8 +28,7 @@ namespace DANGNHAP
             ShowList(listSanPhams);            
             List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
             ShowComBoLoai();
-            ShowListLoai(listLoaiSPs);          
-                   
+            ShowListLoai(listLoaiSPs);                   
         }
 
         public void ShowComBoLoai()

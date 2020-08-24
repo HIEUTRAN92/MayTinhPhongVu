@@ -8,7 +8,7 @@ namespace DANGNHAP.Modelss
     public partial class PhongVuContextDB : DbContext
     {
         public PhongVuContextDB()
-            : base("name=PhongVuContextDB")
+            : base("name=PhongVuContextDB1")
         {
         }
 
@@ -23,6 +23,7 @@ namespace DANGNHAP.Modelss
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; }
         public virtual DbSet<PhieuXuat> PhieuXuats { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
