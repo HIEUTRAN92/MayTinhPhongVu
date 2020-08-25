@@ -34,11 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -66,23 +71,23 @@
     <Compile Include="Data\LoaiSanPham.cs" />
     <Compile Include="Data\PhongVuDB.cs" />
     <Compile Include="Data\SanPham.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRepost.cs">
+    <Compile Include="frm_Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRepost.Designer.cs">
-      <DependentUpon>frmRepost.cs</DependentUpon>
+    <Compile Include="frm_Report.Designer.cs">
+      <DependentUpon>frm_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTrangChu.cs">
+    <Compile Include="frm_TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTrangChu.Designer.cs">
-      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    <Compile Include="frm_TrangChu.Designer.cs">
+      <DependentUpon>frm_TrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelss\CT_HoaDon.cs" />
     <Compile Include="Modelss\CT_PhieuNhap.cs" />
@@ -98,20 +103,20 @@
     <Compile Include="Modelss\SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLSanPham.cs">
+    <Compile Include="frm_QLSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLSanPham.Designer.cs">
-      <DependentUpon>QLSanPham.cs</DependentUpon>
+    <Compile Include="frm_QLSP.Designer.cs">
+      <DependentUpon>frm_QLSP.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRepost.resx">
-      <DependentUpon>frmRepost.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Report.resx">
+      <DependentUpon>frm_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTrangChu.resx">
-      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    <EmbeddedResource Include="frm_TrangChu.resx">
+      <DependentUpon>frm_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -124,8 +129,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QLSanPham.resx">
-      <DependentUpon>QLSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="frm_QLSP.resx">
+      <DependentUpon>frm_QLSP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -218,6 +223,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\laptop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\br1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\br4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBR14.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
