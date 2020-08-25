@@ -77,7 +77,17 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frm_Report.cs">
+=======
+    <Compile Include="frmQLHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHD.Designer.cs">
+      <DependentUpon>frmQLHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepost.cs">
+>>>>>>> c0ffea9828ad0cb63af6f715246a4b6ef31d956e
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Report.Designer.cs">
