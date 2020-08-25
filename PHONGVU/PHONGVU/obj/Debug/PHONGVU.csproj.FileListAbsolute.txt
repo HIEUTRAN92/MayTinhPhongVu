@@ -130,3 +130,6 @@ C:\Users\thaibinh\Desktop\ABC\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\es\DevExp
 C:\Users\thaibinh\Desktop\ABC\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\thaibinh\Desktop\ABC\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\thaibinh\Desktop\ABC\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csproj.CopyComplete
+D:\New folder (4)\ABC\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DANGNHAP.exe.config
+D:\New folder (4)\ABC\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.exe
+D:\New folder (4)\ABC\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.pdb
