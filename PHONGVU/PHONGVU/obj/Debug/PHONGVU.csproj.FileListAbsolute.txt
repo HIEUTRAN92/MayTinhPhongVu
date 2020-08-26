@@ -99,7 +99,6 @@ C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\de\DevExpress.Pdf
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_Report.resources
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_TrangChu.resources
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_QLSP.resources
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_ThemSP.resources

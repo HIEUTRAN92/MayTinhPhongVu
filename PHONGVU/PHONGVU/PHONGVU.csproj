@@ -68,17 +68,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmABCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABCD.Designer.cs">
+      <DependentUpon>frmABCD.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Report.Designer.cs">
-      <DependentUpon>frm_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ThemLoaiSP.cs">
       <SubType>Form</SubType>
@@ -118,11 +118,11 @@
     <Compile Include="frm_QLSP.Designer.cs">
       <DependentUpon>frm_QLSP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmABCD.resx">
+      <DependentUpon>frmABCD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Report.resx">
-      <DependentUpon>frm_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemLoaiSP.resx">
       <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
