@@ -104,3 +104,4 @@ C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_QLSP
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_ThemSP.resources
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_ThemLoaiSP.resources
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmABCD.resources
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmkhobai.resources

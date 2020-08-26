@@ -65,7 +65,8 @@ namespace DANGNHAP
 
         private void btnQLNS_Click(object sender, EventArgs e)
         {
-
+            frmkhobai frm = new frmkhobai();
+            frm.Show();
         }
 
         private void btnQLBH_Click(object sender, EventArgs e)
