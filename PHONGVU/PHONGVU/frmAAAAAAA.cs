@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DANGNHAP
 {
-    public partial class frmkhobai : Form
+    public partial class frmAAAAAAA : Form
     {
-        public frmkhobai()
+        public frmAAAAAAA()
         {
             InitializeComponent();
         }
