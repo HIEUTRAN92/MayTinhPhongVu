@@ -68,9 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\LoaiSanPham.cs" />
-    <Compile Include="Data\PhongVuDB.cs" />
-    <Compile Include="Data\SanPham.cs" />
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,24 +80,36 @@
     <Compile Include="frm_Report.Designer.cs">
       <DependentUpon>frm_Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ThemLoaiSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemLoaiSP.Designer.cs">
+      <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemSP.Designer.cs">
+      <DependentUpon>frm_ThemSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_TrangChu.Designer.cs">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelss\CT_HoaDon.cs" />
-    <Compile Include="Modelss\CT_PhieuNhap.cs" />
-    <Compile Include="Modelss\CT_PhieuXuat.cs" />
-    <Compile Include="Modelss\HoaDon.cs" />
-    <Compile Include="Modelss\KhachHang.cs" />
-    <Compile Include="Modelss\LoaiSP.cs" />
-    <Compile Include="Modelss\NguoiDung.cs" />
-    <Compile Include="Modelss\NhanVien.cs" />
-    <Compile Include="Modelss\PhieuNhap.cs" />
-    <Compile Include="Modelss\PhieuXuat.cs" />
-    <Compile Include="Modelss\PhongVuContextDB.cs" />
-    <Compile Include="Modelss\SanPham.cs" />
+    <Compile Include="Modell\CT_HoaDon.cs" />
+    <Compile Include="Modell\CT_PhieuNhap.cs" />
+    <Compile Include="Modell\CT_PhieuXuat.cs" />
+    <Compile Include="Modell\HoaDon.cs" />
+    <Compile Include="Modell\KhachHang.cs" />
+    <Compile Include="Modell\LoaiSP.cs" />
+    <Compile Include="Modell\NguoiDung.cs" />
+    <Compile Include="Modell\NhanVien.cs" />
+    <Compile Include="Modell\PhieuNhap.cs" />
+    <Compile Include="Modell\PhieuXuat.cs" />
+    <Compile Include="Modell\PhongVuDB.cs" />
+    <Compile Include="Modell\SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frm_QLSP.cs">
@@ -114,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Report.resx">
       <DependentUpon>frm_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemLoaiSP.resx">
+      <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemSP.resx">
+      <DependentUpon>frm_ThemSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TrangChu.resx">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>
@@ -274,6 +289,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IBR14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

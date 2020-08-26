@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DANGNHAP.Modelss;
+using DANGNHAP.Modell;
 using DANGNHAP.Properties;
 using System.Data.SqlClient;
 
@@ -19,11 +19,42 @@ namespace DANGNHAP
         {
             InitializeComponent();
         }
-
+        bool isUpdate = false;
         string hinh = "";
         private void QLSanPham_Load(object sender, EventArgs e)
         {
-            PhongVuContextDB context = new PhongVuContextDB();
+            txtMaLoai.Enabled = false;
+            txtTenLoai.Enabled = false;
+            btnXoaLoai.Enabled = false;
+            btnCapNhatLoai.Enabled = false;
+            if (!isUpdate)
+            {
+                txtMaSP.Enabled = false;
+                txtTenSP.Enabled = false;
+                txtMoTa.Enabled = false;
+                txtGiaBan.Enabled = false;
+                txtSoLuong.Enabled = false;
+                cboLoaiSP.Enabled = false;
+                cboHangSX.Enabled = false;
+
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
+            else
+            {
+                txtMaSP.Enabled = true;
+                txtTenSP.Enabled = true;
+                txtMoTa.Enabled = true;
+                txtGiaBan.Enabled = true;
+                txtSoLuong.Enabled = true;
+                cboLoaiSP.Enabled = true;
+                cboHangSX.Enabled = true;
+
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+            }
+            
+            PhongVuDB context = new PhongVuDB();
             List<SanPham> listSanPhams = context.SanPhams.ToList();
             ShowList(listSanPhams);            
             List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
@@ -35,7 +66,7 @@ namespace DANGNHAP
         public void ShowComBoLoai()
         {
             cboLoaiSP.Items.Clear();
-            PhongVuContextDB context = new PhongVuContextDB();           
+            PhongVuDB context = new PhongVuDB();           
             List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
             foreach (LoaiSP p in listLoaiSPs)
             {
@@ -56,6 +87,8 @@ namespace DANGNHAP
                 ltvSP.Items[i].SubItems.Add(p.Gia.ToString());
                 ltvSP.Items[i].SubItems.Add(p.img);
                 ltvSP.Items[i].SubItems.Add(p.MaLoaiSP.ToString());
+                ltvSP.Items[i].SubItems.Add(p.SoLuong.ToString());
+                ltvSP.Items[i].SubItems.Add(p.HangSX.ToString());
                 i++;
             }
         }
@@ -74,6 +107,33 @@ namespace DANGNHAP
 
         private void ltvSP_SelectedIndexChanged(object sender, EventArgs e)
         {
+            isUpdate = true;
+            if (!isUpdate)
+            {
+                txtMaSP.Enabled = false;
+                txtTenSP.Enabled = false;
+                txtMoTa.Enabled = false;
+                txtGiaBan.Enabled = false;
+                txtSoLuong.Enabled = false;
+                cboLoaiSP.Enabled = false;
+                cboHangSX.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
+            else
+            {
+                txtMaSP.Enabled = true;
+                txtTenSP.Enabled = true;
+                txtMoTa.Enabled = true;
+                txtGiaBan.Enabled = true;
+                txtSoLuong.Enabled = true;
+                cboLoaiSP.Enabled = true;
+                cboHangSX.Enabled = true;
+
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+                btnThem.Enabled = false;
+            }
             ListView.SelectedListViewItemCollection list = this.ltvSP.SelectedItems;
             foreach (ListViewItem item in ltvSP.SelectedItems)
             {
@@ -81,10 +141,12 @@ namespace DANGNHAP
                 txtTenSP.Text = item.SubItems[1].Text;
                 txtMoTa.Text = item.SubItems[2].Text;
                 txtGiaBan.Text = item.SubItems[3].Text;
+                txtSoLuong.Text = item.SubItems[6].Text;
+                cboHangSX.Text = item.SubItems[7].Text;
                 hinh = item.SubItems[4].Text;
                 Image img = hinh == ""?Image.FromFile(@"C:\Users\DELL\Pictures\logoPV.png") : Image.FromFile(hinh);
                 picSP.Image = img;
-                PhongVuContextDB context = new PhongVuContextDB();
+                PhongVuDB context = new PhongVuDB();
                 List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();                
                 int a = Convert.ToInt32(item.SubItems[5].Text);
                 LoaiSP s = listLoaiSPs.FirstOrDefault(p => p.MaLoaiSP == a);
@@ -95,71 +157,39 @@ namespace DANGNHAP
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtMaSP.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập mã sản phẩm", "Thông Báo");
-                }
-                else if(txtTenSP.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập tên sản phẩm", "Thông Báo");
-                }
-                else if(txtGiaBan.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập giá bán", "Thông Báo");
-                }else if(txtMoTa.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập mô tả", "Thông Báo");
-                }else if(cboLoaiSP.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa chọn loại sản phẩm", "Thông Báo");
-                }else if(picSP.Image == null)
-                {
-                    MessageBox.Show("Bạn chưa chọn ảnh sản phẩm", "Thông Báo");
-                }else
-                {
-                    SanPham temp = new SanPham();
-                    temp.MaSP = Convert.ToInt32(txtMaSP.Text);
-                    temp.TenSP = txtTenSP.Text;
-                    temp.Gia = Convert.ToInt32(txtGiaBan.Text);
-                    PhongVuContextDB context = new PhongVuContextDB();
-                    List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
-                    LoaiSP s = listLoaiSPs.FirstOrDefault(p => p.TenLoaiSP == cboLoaiSP.Text);
-                    temp.MaLoaiSP = s.MaLoaiSP;
-                    temp.Mota = txtMoTa.Text;
-                    temp.img = hinh;
-                    InsertSanPham(temp);                    
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message,"Thông Báo");
-            }
-                       
+            frm_ThemSP frm = new frm_ThemSP();
+            frm.themSanPham = new frm_ThemSP.ThemSanPham(themSanPham);
+            frm.ShowDialog();           
+
+        }
+
+        public void themSanPham(string ma, string ten, string mota, int gia, string hinh, int sl, string hsx, int ml)
+        {
+            SanPham temp = new SanPham();
+            temp.MaSP = Convert.ToInt32(ma);
+            temp.TenSP = ten;
+            temp.Mota = mota;
+            temp.Gia = gia;
+            temp.img = hinh;
+            temp.SoLuong = sl;
+            temp.HangSX = hsx;
+            temp.MaLoaiSP = ml;
+            InsertSanPham(temp);
         }
 
         public void InsertSanPham(SanPham temp)
         {
-            PhongVuContextDB context = new PhongVuContextDB();
-            SanPham item = context.SanPhams.FirstOrDefault(p => p.MaSP == temp.MaSP); //kiem tra san pham da ton tai chua
-            if(item != null)
-            {
-                MessageBox.Show("Sản phẩm đã tồn tại", "Thông Báo");
-            }
-            else
-            {
-                context.SanPhams.Add(temp); // đưa đối tương temp vào DBSet san pham
-                context.SaveChanges();
-                List<SanPham> listSanPhams = context.SanPhams.ToList();
-                ShowList(listSanPhams);
-                MessageBox.Show("Thêm sản phẩm thành công", "Thông Báo");                
-            }            
+            PhongVuDB context = new PhongVuDB();
+            context.SanPhams.Add(temp); // đưa đối tương temp vào DBSet san pham
+            context.SaveChanges();
+            List<SanPham> listSanPhams = context.SanPhams.ToList();
+            ShowList(listSanPhams);
+            MessageBox.Show("Thêm sản phẩm thành công", "Thông Báo");                      
         }
 
         public void UpdateSanPham(SanPham temp)
         {
-            PhongVuContextDB context = new PhongVuContextDB();
+            PhongVuDB context = new PhongVuDB();
             SanPham item = context.SanPhams.FirstOrDefault(p => p.MaSP == temp.MaSP); //lay ra lai thong tin cũ
             if (item != null)
             {
@@ -168,11 +198,50 @@ namespace DANGNHAP
                 item.Mota = temp.Mota; //muôn update mota
                 item.Gia = temp.Gia; //muon thay doi gia
                 item.img = temp.img; //muôn update anh
-                item.MaLoaiSP = temp.MaLoaiSP; //muon thay doi ma loai                          
-                context.SaveChanges(); // Lưu thay đổi
-                MessageBox.Show("Cập nhật sản phẩm thành công","Thông Báo");
+                item.MaLoaiSP = temp.MaLoaiSP; //muon thay doi ma loai 
+                item.SoLuong = temp.SoLuong;
+                item.HangSX = temp.HangSX;
+                context.SaveChanges(); // Lưu thay đổi                
                 List<SanPham> listSanPhams = context.SanPhams.ToList();
                 ShowList(listSanPhams);
+                isUpdate = false;
+                if (!isUpdate)
+                {
+                    txtMaSP.Text = "";
+                    txtTenSP.Text = "";
+                    txtMoTa.Text = "";
+                    txtGiaBan.Text = "";
+                    txtSoLuong.Text = "";
+                    cboLoaiSP.Text = "LapTop";
+                    cboHangSX.Text = "DELL";                    
+
+                    txtMaSP.Enabled = false;
+                    txtTenSP.Enabled = false;
+                    txtMoTa.Enabled = false;
+                    txtGiaBan.Enabled = false;
+                    txtSoLuong.Enabled = false;
+                    cboLoaiSP.Enabled = false;
+                    cboHangSX.Enabled = false;
+                    btnSua.Enabled = false;
+                    btnXoa.Enabled = false;
+                    btnThem.Enabled = true;
+                }
+                else
+                {
+                    txtMaSP.Enabled = true;
+                    txtTenSP.Enabled = true;
+                    txtMoTa.Enabled = true;
+                    txtGiaBan.Enabled = true;
+                    txtSoLuong.Enabled = true;
+                    cboLoaiSP.Enabled = true;
+                    cboHangSX.Enabled = true;
+
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    btnThem.Enabled = false;
+                }
+
+                MessageBox.Show("Cập nhật sản phẩm thành công", "Thông Báo");
             }
             else
             {
@@ -205,6 +274,14 @@ namespace DANGNHAP
                 {
                     MessageBox.Show("Bạn chưa chọn loại sản phẩm", "Thông Báo");
                 }
+                else if (cboHangSX.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa chọn hãng sản xuất", "Thông Báo");
+                }
+                else if (txtSoLuong.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập số lượng", "Thông Báo");
+                }
                 else if (picSP.Image == null)
                 {
                     MessageBox.Show("Bạn chưa chọn ảnh sản phẩm", "Thông Báo");
@@ -215,11 +292,13 @@ namespace DANGNHAP
                     temp.MaSP = Convert.ToInt32(txtMaSP.Text);
                     temp.TenSP = txtTenSP.Text;
                     temp.Gia = Convert.ToInt32(txtGiaBan.Text);
-                    PhongVuContextDB context = new PhongVuContextDB();
+                    PhongVuDB context = new PhongVuDB();
                     List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
                     LoaiSP s = listLoaiSPs.FirstOrDefault(p => p.TenLoaiSP == cboLoaiSP.Text);
                     temp.MaLoaiSP = s.MaLoaiSP;
                     temp.Mota = txtMoTa.Text;
+                    temp.HangSX = cboHangSX.Text;
+                    temp.SoLuong = Convert.ToInt32(txtSoLuong.Text);
                     temp.img = hinh;
                     UpdateSanPham(temp);
                 }
@@ -233,7 +312,7 @@ namespace DANGNHAP
 
         public void DeleteSanPham(SanPham temp)
         {
-            PhongVuContextDB context = new PhongVuContextDB();
+            PhongVuDB context = new PhongVuDB();
             SanPham item = context.SanPhams.FirstOrDefault(p => p.MaSP == temp.MaSP); //lay ra lai thong tin cũ
             if (item != null)
             {
@@ -244,6 +323,42 @@ namespace DANGNHAP
                     context.SaveChanges(); // Lưu thay đổi
                     List<SanPham> listSanPhams = context.SanPhams.ToList();
                     ShowList(listSanPhams);
+                    isUpdate = false;
+                    if (!isUpdate)
+                    {
+                        txtMaSP.Text = "";
+                        txtTenSP.Text = "";
+                        txtMoTa.Text = "";
+                        txtGiaBan.Text = "";
+                        txtSoLuong.Text = "";
+                        cboLoaiSP.Text = "LapTop";
+                        cboHangSX.Text = "DELL";
+
+                        txtMaSP.Enabled = false;
+                        txtTenSP.Enabled = false;
+                        txtMoTa.Enabled = false;
+                        txtGiaBan.Enabled = false;
+                        txtSoLuong.Enabled = false;
+                        cboLoaiSP.Enabled = false;
+                        cboHangSX.Enabled = false;
+                        btnSua.Enabled = false;
+                        btnXoa.Enabled = false;
+                        btnThem.Enabled = true;
+                    }
+                    else
+                    {
+                        txtMaSP.Enabled = true;
+                        txtTenSP.Enabled = true;
+                        txtMoTa.Enabled = true;
+                        txtGiaBan.Enabled = true;
+                        txtSoLuong.Enabled = true;
+                        cboLoaiSP.Enabled = true;
+                        cboHangSX.Enabled = true;
+
+                        btnSua.Enabled = true;
+                        btnXoa.Enabled = true;
+                        btnThem.Enabled = false;
+                    }
                     MessageBox.Show("Xóa sản phẩm thành công", "Thông Báo");
                 }
 
@@ -271,7 +386,7 @@ namespace DANGNHAP
                     temp.MaSP = Convert.ToInt32(txtMaSP.Text);
                     temp.TenSP = txtTenSP.Text;
                     temp.Gia = Convert.ToInt32(txtGiaBan.Text);
-                    PhongVuContextDB context = new PhongVuContextDB();
+                    PhongVuDB context = new PhongVuDB();
                     List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
                     LoaiSP s = listLoaiSPs.FirstOrDefault(p => p.TenLoaiSP == cboLoaiSP.Text);
                     temp.MaLoaiSP = s.MaLoaiSP;                    
@@ -294,35 +409,28 @@ namespace DANGNHAP
 
         private void btnThemLoai_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtMaLoai.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập ma loại sản phẩm", "Thông Báo");
+            frm_ThemLoaiSP frm = new frm_ThemLoaiSP();
+            frm.themLoaiSanPham = new frm_ThemLoaiSP.ThemLoaiSanPham(themLoaiSanPham);
+            frm.ShowDialog();                  
+        }
 
-                }
-                else if (txtTenLoai.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập tên loại sản phẩm", "Thông Báo");
-                }
-                else
-                {
-                    LoaiSP temp = new LoaiSP();
-                    temp.MaLoaiSP = Convert.ToInt32(txtMaLoai.Text);
-                    temp.TenLoaiSP = txtTenLoai.Text;
-                    InsertLoaiSP(temp);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Thông Báo");
-            }            
-
+        public void themLoaiSanPham(int ma , string ten)
+        {
+            PhongVuDB context = new PhongVuDB();
+            LoaiSP item = new LoaiSP();
+            item.MaLoaiSP = ma;
+            item.TenLoaiSP = ten;
+            context.LoaiSPs.Add(item); // đưa đối tương temp vào DBSet san pham
+            context.SaveChanges();
+            List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
+            ShowListLoai(listLoaiSPs);
+            ShowComBoLoai();
+            MessageBox.Show("Thêm loại sản phẩm thành công", "Thông Báo");
         }
 
         public void InsertLoaiSP(LoaiSP temp)
         {
-            PhongVuContextDB context = new PhongVuContextDB();            
+            PhongVuDB context = new PhongVuDB();            
             LoaiSP item = context.LoaiSPs.FirstOrDefault(p => p.MaLoaiSP == temp.MaLoaiSP); //lay ra lai thong tin cũ
             if (item != null)
             {                
@@ -369,12 +477,19 @@ namespace DANGNHAP
 
         public void UpdateLoaiSP(LoaiSP temp)
         {
-            PhongVuContextDB context = new PhongVuContextDB();                       
+            PhongVuDB context = new PhongVuDB();                       
             LoaiSP item = context.LoaiSPs.FirstOrDefault(p => p.MaLoaiSP == temp.MaLoaiSP); //lay ra lai thong tin cũ
             if (item != null)
             {                
                 item.TenLoaiSP = temp.TenLoaiSP; //Cap nhat lai ten loai
                 context.SaveChanges(); // Lưu thay đổi
+                txtMaLoai.Enabled = false;
+                txtTenLoai.Enabled = false;
+                btnXoaLoai.Enabled = false;
+                btnCapNhatLoai.Enabled = false;
+                btnThemLoai.Enabled = true;
+                txtMaLoai.Text = "";
+                txtTenLoai.Text = "";
                 MessageBox.Show("Cập nhật loại sản phẩm thành công", "Thông Báo");
                 List<LoaiSP> listLoaiSP = context.LoaiSPs.ToList();
                 ShowListLoai(listLoaiSP);
@@ -415,7 +530,7 @@ namespace DANGNHAP
             DialogResult result = MessageBox.Show("Bạn chắc chắn muốn xóa loại sản phẩm này!","Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(result == DialogResult.Yes)
             {
-                PhongVuContextDB context = new PhongVuContextDB();
+                PhongVuDB context = new PhongVuDB();
                 LoaiSP item = context.LoaiSPs.FirstOrDefault(p => p.MaLoaiSP == temp.MaLoaiSP); //lay ra lai thong tin cũ
                 if (item != null)
                 {
@@ -424,6 +539,13 @@ namespace DANGNHAP
                     List<LoaiSP> listLoaiSPs = context.LoaiSPs.ToList();
                     ShowListLoai(listLoaiSPs);
                     ShowComBoLoai();
+                    txtMaLoai.Enabled = false;
+                    txtTenLoai.Enabled = false;
+                    btnXoaLoai.Enabled = false;
+                    btnCapNhatLoai.Enabled = false;
+                    btnThemLoai.Enabled = true;
+                    txtMaLoai.Text = "";
+                    txtTenLoai.Text = "";
                     MessageBox.Show("Xóa loại sản phẩm thành công", "Thông Báo");
                 }
                 else
@@ -455,6 +577,11 @@ namespace DANGNHAP
 
         private void ltvLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtMaLoai.Enabled = true;
+            txtTenLoai.Enabled = true;
+            btnCapNhatLoai.Enabled = true;
+            btnXoaLoai.Enabled = true;
+            btnThemLoai.Enabled = false;
             ListView.SelectedListViewItemCollection list = this.ltvLoaiSP.SelectedItems;
             foreach (ListViewItem item in ltvLoaiSP.SelectedItems)
             {

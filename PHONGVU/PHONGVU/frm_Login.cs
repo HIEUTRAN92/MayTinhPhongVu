@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using DANGNHAP.Modelss;
+using DANGNHAP.Modell;
 
 namespace DANGNHAP
 {
@@ -35,7 +35,7 @@ namespace DANGNHAP
                 }
                 else
                 {
-                    PhongVuContextDB context = new PhongVuContextDB();
+                    PhongVuDB context = new PhongVuDB();
                     List<NguoiDung> listNguoiDungs = context.NguoiDungs.ToList();
                     NguoiDung s = listNguoiDungs.FirstOrDefault(p => p.TenDN == txtTaiKhoan.Text && p.MatKhau == txtMatKhau.Text);
                     if (s != null)
@@ -43,7 +43,9 @@ namespace DANGNHAP
                         frm_TrangChu frm = new frm_TrangChu();
                         nguoiDungLogin nd = new nguoiDungLogin(frm.kiemTraND);
                         nd(s);
-                        frm.Show();                                              
+                        this.Visible = false;
+                        frm.ShowDialog();
+                        this.Visible = true;
                     }
                     else
                     {

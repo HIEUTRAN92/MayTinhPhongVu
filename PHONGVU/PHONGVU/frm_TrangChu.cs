@@ -1,4 +1,4 @@
-﻿using DANGNHAP.Modelss;
+﻿using DANGNHAP.Modell;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,11 +28,17 @@ namespace DANGNHAP
             if (nd.LoaiTK == "2")
             {
                 btnQLNX.Enabled = false;
+                btnQLNX.BackColor = Color.Gray;
                 btnQLHT.Enabled = false;
+                btnQLHT.BackColor = Color.Gray;
                 btnQLK.Enabled = false;
+                btnQLK.BackColor = Color.Gray;
                 btnQLNCC.Enabled = false;
+                btnQLNCC.BackColor = Color.Gray;
                 btnQLNS.Enabled = false;
+                btnQLNS.BackColor = Color.Gray;
                 btnQLSP.Enabled = false;
+                btnQLSP.BackColor = Color.Gray;
             }
             else if(nd.LoaiTK == "3")
             {
@@ -46,7 +52,9 @@ namespace DANGNHAP
         private void btnQLSP_Click(object sender, EventArgs e)
         {
             frm_QLSP frm = new frm_QLSP();
-            frm.Show();
+            this.Visible = false;
+            frm.ShowDialog();
+            this.Visible = true;  
         }
 
         private void btnQLKH_Click(object sender, EventArgs e)
