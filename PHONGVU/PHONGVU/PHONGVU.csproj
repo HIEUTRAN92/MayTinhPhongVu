@@ -51,12 +51,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,11 +77,19 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frm_Report.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Report.Designer.cs">
       <DependentUpon>frm_Report.cs</DependentUpon>
+=======
+    <Compile Include="frmBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCao.Designer.cs">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+>>>>>>> origin/Kien_Repost
     </Compile>
     <Compile Include="frm_ThemLoaiSP.cs">
       <SubType>Form</SubType>
@@ -86,6 +97,7 @@
     <Compile Include="frm_ThemLoaiSP.Designer.cs">
       <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frm_ThemSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,21 @@
     <Compile Include="Modell\PhieuXuat.cs" />
     <Compile Include="Modell\PhongVuDB.cs" />
     <Compile Include="Modell\SanPham.cs" />
+=======
+    <Compile Include="Modelss\CT_HoaDon.cs" />
+    <Compile Include="Modelss\CT_PhieuNhap.cs" />
+    <Compile Include="Modelss\CT_PhieuXuat.cs" />
+    <Compile Include="Modelss\HoaDon.cs" />
+    <Compile Include="Modelss\KhachHang.cs" />
+    <Compile Include="Modelss\LoaiSP.cs" />
+    <Compile Include="Modelss\NguoiDung.cs" />
+    <Compile Include="Modelss\NhanVien.cs" />
+    <Compile Include="Modelss\PhieuNhap.cs" />
+    <Compile Include="Modelss\PhieuXuat.cs" />
+    <Compile Include="Modelss\PhongVuContextDB.cs" />
+    <Compile Include="Modelss\SanPham.cs" />
+    <Compile Include="Modelss\sysdiagram.cs" />
+>>>>>>> origin/Kien_Repost
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frm_QLSP.cs">
@@ -121,8 +148,13 @@
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frm_Report.resx">
       <DependentUpon>frm_Report.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmBaoCao.resx">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+>>>>>>> origin/Kien_Repost
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemLoaiSP.resx">
       <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
@@ -239,6 +271,7 @@
   <ItemGroup>
     <None Include="Resources\laptop1.png" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <None Include="Resources\khoa.png" />
   </ItemGroup>
@@ -293,5 +326,8 @@
   <ItemGroup>
     <None Include="Resources\img.png" />
   </ItemGroup>
+=======
+  <ItemGroup />
+>>>>>>> origin/Kien_Repost
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

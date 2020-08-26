@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 namespace DANGNHAP.Modell
+=======
+namespace DANGNHAP.Modelss
+>>>>>>> origin/Kien_Repost
 {
     using System;
     using System.Data.Entity;
@@ -7,8 +11,18 @@ namespace DANGNHAP.Modell
 
     public partial class PhongVuDB : DbContext
     {
+<<<<<<< HEAD
+<<<<<<<< HEAD:PHONGVU/PHONGVU/Modell/PhongVuDB.cs
         public PhongVuDB()
             : base("name=PhongVuDB1")
+========
+        public PhongVuContextDB()
+            : base("name=PhongVuContextDB1")
+>>>>>>>> origin/Kien_Repost:PHONGVU/PHONGVU/Modelss/PhongVuContextDB.cs
+=======
+        public PhongVuDB()
+            : base("name=PhongVuDBContext")
+>>>>>>> origin/Kien_Repost
         {
         }
 
@@ -23,6 +37,7 @@ namespace DANGNHAP.Modell
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; }
         public virtual DbSet<PhieuXuat> PhieuXuats { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

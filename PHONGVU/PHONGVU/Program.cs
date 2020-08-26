@@ -16,7 +16,11 @@ namespace DANGNHAP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frmLogin());
+=======
+            Application.Run(new frmBaoCao());
+>>>>>>> origin/Kien_Repost
         }
     }
 }
