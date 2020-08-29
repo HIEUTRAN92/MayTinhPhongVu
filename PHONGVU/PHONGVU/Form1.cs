@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace DANGNHAP
 {
@@ -58,7 +57,7 @@ namespace DANGNHAP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

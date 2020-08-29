@@ -15,7 +15,7 @@ namespace DANGNHAP.Data
         public static void Connect()
         {
             Con = new SqlConnection();   //Khởi tạo đối tượng
-            Con.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + Application.StartupPath + @"\Quanlybanhang.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            Con.ConnectionString = @"Data Source=.\thaibinh;AttachDbFilename=" + Application.StartupPath + @"\PhongVuDB1.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
             Con.Open();                  //Mở kết nối
             //Kiểm tra kết nối
             if (Con.State == ConnectionState.Open)
@@ -207,12 +207,6 @@ namespace DANGNHAP.Data
                 ma = reader.GetValue(0).ToString();
             reader.Close();
             return ma;
-        }
-        public static string cvDateTime(string date)
-        {
-            string[] elements = date.Split('/');
-            string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
-            return dt;
         }
         //Hàm kiểm tra khoá trùng
         public static bool CheckKey(string sql)
