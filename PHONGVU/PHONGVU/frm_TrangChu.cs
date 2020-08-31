@@ -101,5 +101,13 @@ namespace DANGNHAP
         {
 
         }
+
+        private void btnQLBH_Click(object sender, EventArgs e)
+        {
+            frm_QLHD frm = new frm_QLHD();
+            this.Visible = false;
+            frm.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
