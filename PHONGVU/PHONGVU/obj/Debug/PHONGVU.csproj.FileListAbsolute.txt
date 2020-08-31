@@ -63,11 +63,6 @@ E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\PHONGVU.csproj.GenerateResource.c
 E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.exe.licenses
 E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.exe
 E:\GITHUB\Project_C#\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.pdb
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.Data.v19.2.dll
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.Printing.v19.2.Core.dll
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.Sparkline.v19.2.Core.dll
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.Utils.v19.2.dll
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.XtraEditors.v19.2.dll
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.Pdf.v19.2.Core.dll
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.Data.v19.2.xml
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\bin\Debug\DevExpress.Printing.v19.2.Core.xml
@@ -103,5 +98,7 @@ C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_Tran
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_QLSP.resources
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_ThemSP.resources
 C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_ThemLoaiSP.resources
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmABCD.resources
-C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frmAAAAAAA.resources
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_NguoiDung.resources
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\DANGNHAP.frm_QLHD.resources
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\RdlCompile.cache
+C:\Users\DELL\Desktop\MayTinhPhongVu\PHONGVU\PHONGVU\obj\Debug\RdlCompile.compiled

@@ -556,11 +556,6 @@ namespace DANGNHAP
             }            
         }
 
-        private void picSP_Click(object sender, EventArgs e)
-        {
-                                   
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
             //Tạo hộp thoại mở file

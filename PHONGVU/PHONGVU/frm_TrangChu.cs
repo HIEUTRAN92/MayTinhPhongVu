@@ -57,22 +57,25 @@ namespace DANGNHAP
             this.Visible = true;  
         }
 
-        private void btnQLKH_Click(object sender, EventArgs e)
-        {
-            frmABCD frm = new frmABCD();
-            frm.Show();
-        }
+        //private void btnQLKH_Click(object sender, EventArgs e)
+        //{
+        //    frmABCD frm = new frmABCD();
+        //    frm.Show();
+        //}
 
         private void btnQLNS_Click(object sender, EventArgs e)
         {
-            
+            frm_NguoiDung frm = new frm_NguoiDung();
+            this.Visible = false;
+            frm.ShowDialog();
+            this.Visible = true;
         }
 
-        private void btnQLBH_Click(object sender, EventArgs e)
-        {
-            frmAAAAAAA frm = new frmAAAAAAA();
-            frm.Show();
-        }
+        //private void btnQLBH_Click(object sender, EventArgs e)
+        //{
+        //    frmAAAAAAA frm = new frmAAAAAAA();
+        //    frm.Show();
+        //}
 
         private void btnQLNX_Click(object sender, EventArgs e)
         {

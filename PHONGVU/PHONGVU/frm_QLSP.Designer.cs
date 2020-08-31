@@ -310,8 +310,7 @@
             this.picSP.Size = new System.Drawing.Size(124, 126);
             this.picSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSP.TabIndex = 7;
-            this.picSP.TabStop = false;
-            this.picSP.Click += new System.EventHandler(this.picSP_Click);
+            this.picSP.TabStop = false;            
             // 
             // cboHangSX
             // 

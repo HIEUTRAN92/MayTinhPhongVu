@@ -169,7 +169,7 @@
             this.btnQLKH.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.btnQLKH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLKH.UseVisualStyleBackColor = false;
-            this.btnQLKH.Click += new System.EventHandler(this.btnQLKH_Click);
+            //this.btnQLKH.Click += new System.EventHandler(this.btnQLKH_Click);
             // 
             // btnQLBH
             // 
@@ -186,7 +186,7 @@
             this.btnQLBH.Text = "QUẢN LÝ BÁN HÀNG";
             this.btnQLBH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLBH.UseVisualStyleBackColor = false;
-            this.btnQLBH.Click += new System.EventHandler(this.btnQLBH_Click);
+            //this.btnQLBH.Click += new System.EventHandler(this.btnQLBH_Click);
             // 
             // btnQLSP
             // 

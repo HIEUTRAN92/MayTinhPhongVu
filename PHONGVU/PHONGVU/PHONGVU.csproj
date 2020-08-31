@@ -68,23 +68,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAAAAAAA.cs">
+    <Compile Include="frm_HDBH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAAAAAAA.Designer.cs">
-      <DependentUpon>frmAAAAAAA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmABCD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmABCD.Designer.cs">
-      <DependentUpon>frmABCD.cs</DependentUpon>
+    <Compile Include="frm_HDBH.Designer.cs">
+      <DependentUpon>frm_HDBH.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NguoiDung.Designer.cs">
+      <DependentUpon>frm_NguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QLHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QLHD.Designer.cs">
+      <DependentUpon>frm_QLHD.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ThemLoaiSP.cs">
       <SubType>Form</SubType>
@@ -124,14 +130,14 @@
     <Compile Include="frm_QLSP.Designer.cs">
       <DependentUpon>frm_QLSP.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmAAAAAAA.resx">
-      <DependentUpon>frmAAAAAAA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmABCD.resx">
-      <DependentUpon>frmABCD.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NguoiDung.resx">
+      <DependentUpon>frm_NguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QLHD.resx">
+      <DependentUpon>frm_QLHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemLoaiSP.resx">
       <DependentUpon>frm_ThemLoaiSP.cs</DependentUpon>
@@ -156,7 +162,9 @@
     <EmbeddedResource Include="frm_QLSP.resx">
       <DependentUpon>frm_QLSP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptHoaDon.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DANGNHAP.Modell.CT_HoaDon.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
